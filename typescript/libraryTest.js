@@ -1,0 +1,10 @@
+"use strict";
+exports.__esModule = true;
+var library2_1 = require("./library2");
+var books_1 = require("./books");
+var libro1 = new books_1.Book("nombre del viento", 250, "fkjgdf", "patrick rotfuss", "alfaguara");
+var libro2 = new books_1.Book("khfsjf", 249, "dfsdfs", "karen virgi", "brooks");
+var libreria = new library2_1.Library([libro1, libro2], "lsdjfkldjfkl", "Daniel");
+console.log(libreria.imprimir());
+console.log(libreria.getNumberOfBooks());
+console.log(libreria.findByAutor("patrick rotfuss"));
