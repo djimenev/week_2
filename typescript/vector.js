@@ -1,3 +1,6 @@
+"use strict";
+exports.__esModule = true;
+exports.Vector = void 0;
 var Vector = /** @class */ (function () {
     function Vector(n, k) {
         this.elements = [];
@@ -13,8 +16,7 @@ var Vector = /** @class */ (function () {
         var array = new Vector(0, 0);
         if (this.length == v1.length) {
             for (var x = 0; x < this.length; x++) {
-                //array[x] = v1[x] + this.elements[x];
-                array.elements.push(this.elements[x] + v1[x]);
+                array.elements.push(this.elements[x] + v1.elements[x]);
             }
         }
         return array;
@@ -23,7 +25,7 @@ var Vector = /** @class */ (function () {
         var array = new Vector(0, 0);
         if (this.length == v1.length) {
             for (var x = 0; x < this.length; x++) {
-                array[x] = v1[x] - this.elements[x];
+                array.elements.push(this.elements[x] - v1.elements[x]);
             }
         }
         return array;
@@ -32,7 +34,7 @@ var Vector = /** @class */ (function () {
         var array = new Vector(0, 0);
         if (this.length == v1.length) {
             for (var x = 0; x < this.length; x++) {
-                array[x] = v1[x] * this.elements[x];
+                array.elements.push(this.elements[x] * v1.elements[x]);
             }
         }
         return array;
@@ -47,6 +49,7 @@ var Vector = /** @class */ (function () {
     };
     return Vector;
 }());
+exports.Vector = Vector;
 var vector1 = new Vector(10, 7);
 var vector2 = new Vector(10, 10);
 //console.log(vector1);
@@ -54,4 +57,4 @@ var vector2 = new Vector(10, 10);
 console.log(vector1);
 console.log(vector2);
 //console.log(vector1.multNumber(3));
-console.log(vector1.add(vector2));
+console.log(vector1.mult(vector2));

@@ -1,0 +1,13 @@
+"use strict";
+exports.__esModule = true;
+var vector_1 = require("./vector");
+var vector1 = new vector_1.Vector(10, 7);
+var vector2 = new vector_1.Vector(10, 10);
+//console.log(vector1);
+//vector1.print();
+console.log(vector1);
+console.log(vector2);
+console.log(vector1.multNumber(3));
+console.log(vector1.mult(vector2));
+console.log(vector1.subs(vector2));
+console.log(vector1.add(vector2));

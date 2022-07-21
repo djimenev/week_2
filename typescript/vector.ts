@@ -1,4 +1,4 @@
-class Vector{
+export class Vector{
 
     private elements:number[];
     public length:number;
@@ -22,10 +22,9 @@ class Vector{
 
             if (this.length == v1.length) {
               for (let x = 0; x < this.length; x++) {
-                //array[x] = v1[x] + this.elements[x];
-                //array.elements.push(this.elements[x] + v1[x]);
-              }
-        
+                array.elements.push(this.elements[x] + v1.elements[x]);
+              } 
+         
             }
             return array;
         }
@@ -35,7 +34,7 @@ class Vector{
 
             if (this.length == v1.length) {
               for (let x = 0; x < this.length; x++) {
-                array[x] = v1[x] - this.elements[x];
+                array.elements.push(this.elements[x] - v1.elements[x]);
               }
         
             }
@@ -47,7 +46,7 @@ class Vector{
 
             if (this.length == v1.length) {
               for (let x = 0; x < this.length; x++) {
-                array[x] = v1[x] * this.elements[x];
+                array.elements.push(this.elements[x] * v1.elements[x]);
               }
         
             }
@@ -74,8 +73,9 @@ let vector2 = new Vector(10,10);
 //vector1.print();
 console.log(vector1);
 console.log(vector2);
+
 //console.log(vector1.multNumber(3));
-//console.log(vector1.add(vector2));
+console.log(vector1.mult(vector2));
 
 
 
